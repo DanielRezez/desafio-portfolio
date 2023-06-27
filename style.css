@@ -58,7 +58,7 @@ main section {
 #profile h1 {
     margin: 30px 0 0;
     font-size: 23px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 #profile p {
@@ -75,15 +75,9 @@ main section {
     align-items: start;
 }
 
-.list li a {
+.list li figure, .list li a {
     display: flex;
     justify-content: center;
-}
-
-.list li a img {
-    display: flex;
-    justify-content: center;
-    margin-right: 20px;
 }
 
 #links {
@@ -93,6 +87,21 @@ main section {
 #links ul {
     gap: 22px;
 }
+
+#links li figure img, #links li figure a img {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    justify-content: center;
+}
+
+#links li figure figcaption, #links li figure a figcaption {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 13px;
+    justify-content: center;
+} 
 
 #technologies {
     padding: 32px;
