@@ -103,16 +103,46 @@ main section {
     justify-content: center;
 } 
 
+#technologies, #experiences, #educational-bg {
+    padding: 32px 16px 32px 20px;
+}
+
+#technologies h2, #experiences h2, #educational-bg h2 {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+#technologies ul, #experiences ol, #educational-bg ol {
+    margin: 20px 0 0 12px
+}
+
 #technologies {
-    padding: 32px;
+    height: 208px;
 }
 
-#experiences {
-    padding: 32px;
+#technologies ul {
+    gap: 15px;
+    column-gap: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 72%;
+    width: 98%;
+    overflow: scroll;
+    scrollbar-color: #3EB489 var(--body-bg-color);
 }
 
-#education {
-    padding: 32px;
+#technologies ul li {
+    background: var(--bg-techs);
+    width: 86px;
+    height: 24px;
+    border-radius: 30px;
+    padding: 6px 0;
+    font-size: 10px;
+    font-weight: 700;
+    color: black;
+    text-align: center;
+    justify-content: center;
 }
 
 #portfolio {
