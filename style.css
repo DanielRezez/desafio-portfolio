@@ -70,14 +70,13 @@ main section {
 .list {
     display: flex;
     flex-direction: column;
-    list-style: none;
     list-style-position: inside;
     align-items: start;
 }
 
 .list li figure, .list li a {
     display: flex;
-    justify-content: center;
+    justify-content: start;
 }
 
 #links {
@@ -85,7 +84,25 @@ main section {
 }
 
 #links ul {
-    gap: 22px;
+    list-style: none;
+    gap: 4px;
+}
+
+#links ul li {
+    padding: 8px;
+}
+
+#links ul li a, #links ul li {
+    border-radius: 10px;
+    transition: background 0.2s;
+    width: 100%;
+}
+
+#links ul li:hover {
+    background: #191921;
+    border-radius: 10px;
+    -webkit-text-fill-color: white;
+    -webkit-backdrop-filter: blur(4px);
 }
 
 #links li figure img, #links li figure a img {
@@ -110,10 +127,7 @@ main section {
 #technologies h2, #experiences h2, #educational-bg h2 {
     font-weight: 700;
     font-size: 20px;
-}
-
-#technologies ul, #experiences ol, #educational-bg ol {
-    margin: 20px 0 0 12px
+    margin-bottom: 20px;
 }
 
 #technologies {
@@ -126,10 +140,14 @@ main section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    height: 72%;
+    height: 75%;
     width: 98%;
     overflow: scroll;
     scrollbar-color: #3EB489 var(--body-bg-color);
+    /*top right bottom left*/
+    margin: 0 5px 0 12px;
+    padding-bottom: 5px;
+    list-style: none;
 }
 
 #technologies ul li {
@@ -143,9 +161,60 @@ main section {
     color: black;
     text-align: center;
     justify-content: center;
+    transition: box-shadow 0.2s;
+}
+
+#technologies ul li:hover {
+    box-shadow: 5px 5px 2px rgba(0, 0, 0, 25%);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+#experiences ol, #educational-bg ol {
+    margin-left: 40px;
+    list-style: inside;
+    list-style-position: outside;
+    gap: 20px;
+    text-align: justify;
+    width: 80%;
+}
+
+.instituto-empresa {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.periodo {
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.curso-cargo {
+    font-weight: 500;
+    font-size: 12px;
 }
 
 #portfolio {
     width: auto;
     padding: 40px 40px 0 30px; 
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #personal-info {
+        margin: 0;
+        padding: 0;
+    }
+
+    #portfolio {
+        margin: 0;
+        padding: 0;
+        width: 348px;
+    }
+
+
 }
