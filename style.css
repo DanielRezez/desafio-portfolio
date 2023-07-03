@@ -22,7 +22,6 @@ body {
 }
 
 main {
-    border: 1px solid white;
     display: flex;
 }
 
@@ -194,27 +193,115 @@ main section {
 }
 
 #portfolio {
-    width: auto;
+    width: 100%;
     padding: 40px 40px 0 30px; 
 }
 
+#portfolio article{
+    width: 100%;
+}
+
+.title-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 86px;
+    padding: 30px;
+}
+
+.title-card h2 {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+#my-projects span{
+    font-weight: 400;
+    font-size: 14px;
+}
+
+#projects-cards {
+    background: none;
+    box-shadow: none;
+}
+
+#projects {
+    list-style-position: inside;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    flex-wrap: wrap;
+    overflow: visible;
+    gap: 30px;
+}
+
+#projects li {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-cards);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 25%);
+}
+
+#projects li * {
+    align-items: center;
+}
+
+#title-project figure {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 25px;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+#project-description {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+#data-project {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+#stargazers-forks {
+    display: flex;
+    width: 130px;
+    justify-content: space-between;
+}
+
+#stargazers-forks figure {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+footer {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
 @media screen and (max-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
     main {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    #personal-info {
-        margin: 0;
-        padding: 0;
+    #projects {
+        grid-template-columns: auto;
     }
-
-    #portfolio {
-        margin: 0;
-        padding: 0;
-        width: 348px;
-    }
-
 
 }
