@@ -1,4 +1,4 @@
-const ol = document.querySelector('#projects-cards ol')
+const ol = document.querySelector('#projects')
 
 function getApiGithub() {
     fetch('https://api.github.com/users/danielrezez/repos')
@@ -30,7 +30,7 @@ function getApiGithub() {
                                 <figcaption>${item.forks_count}</figcaption>
                             </figure>
                         </span>
-                        <span><img src="">${item.language}</span>
+                        <span id="most-used-language">${item.language}</span>
                     </div>
                 </a>
             `

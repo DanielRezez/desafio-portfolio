@@ -34,7 +34,7 @@ main section {
 
 #personal-info {
     width: auto;
-    padding: 40px 30px 0 40px;
+    padding: 40px 30px 40px 40px;
 }
 
 #personal-info section {
@@ -100,7 +100,7 @@ main section {
 #links ul li:hover {
     background: #191921;
     border-radius: 10px;
-    -webkit-text-fill-color: white;
+    -webkit-text-fill-color: whitesmoke;
     -webkit-backdrop-filter: blur(4px);
 }
 
@@ -177,6 +177,10 @@ main section {
     width: 80%;
 }
 
+#educational-bg {
+    margin-bottom: 0px;
+}
+
 .instituto-empresa {
     font-weight: 700;
     font-size: 14px;
@@ -194,7 +198,7 @@ main section {
 
 #portfolio {
     width: 100%;
-    padding: 40px 40px 0 30px; 
+    padding: 40px 40px 40px 30px; 
 }
 
 #portfolio article{
@@ -214,6 +218,18 @@ main section {
     font-size: 20px;
 }
 
+.title-card a {
+    transition: all 0.1s;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.title-card a:hover {
+    background: #191921;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
 #my-projects span{
     font-weight: 400;
     font-size: 14px;
@@ -226,7 +242,6 @@ main section {
 
 #projects {
     list-style-position: inside;
-    list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     flex-wrap: wrap;
@@ -241,10 +256,16 @@ main section {
     padding: 30px;
     border-radius: 20px;
     box-shadow: 5px 5px 4px rgba(0, 0, 0, 25%);
+    transition: all 0.1s;
 }
 
 #projects li * {
     align-items: center;
+}
+
+#projects li:hover {
+    outline: 2px solid var(--bg-techs);
+    box-shadow: none;
 }
 
 #title-project figure {
@@ -282,26 +303,157 @@ main section {
     gap: 10px;
 }
 
+#most-used-language {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+#posts {
+    list-style: none;
+}
+
+#posts li a {
+    display: flex;
+    gap: 20px;
+    padding: 30px 30px 40px;
+    border-radius: 20px;
+}
+
+#posts li a:hover {
+    outline: 2px solid var(--bg-techs);
+    box-shadow: none;
+}
+
+#user-pic img {
+    border-radius: 50%;
+    width: 128px;
+}
+
+#post-content {
+    display: flex;
+    flex-direction: column;
+}
+
+#post-content h2 {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#data {
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+#description {
+    font-weight: 500;
+    font-size: 18px;
+    margin: 20px 0 20px;
+}
+
+#tags {
+    display: flex;
+    gap: 25px;
+}
+
+#tags li {
+    font-weight: 500;
+    font-size: 14px;
+    padding: 0px;   
+}
+
+#tags li:hover {
+    text-decoration: underline;
+}
+
 footer {
     text-align: center;
-    padding-bottom: 20px;
+    padding: 40px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 900px) {
+    #personal-info {
+        padding: 30px 30px 30px 30px;
+    }
+
+    #personal-info section {
+        width: 100%;
+    }
+    #portfolio {
+        padding: 30px 30px 0px 0px;
+    }
 }
 
 @media screen and (max-width: 768px) {
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
     main {
         display: flex;
         flex-direction: column;
-        align-items: center;
+    }
+    
+    #personal-info {
+        padding: 30px 30px 30px 30px;
+        display: flex;
+        flex-wrap: wrap;
     }
 
-    #projects {
-        grid-template-columns: auto;
+    #personal-info section {
+        width: 100%;
+    }
+
+    #profile, #links {
+        width: 50% !important;
+    }
+
+    #profile {
+        border-end-end-radius: 0px !important;
+        border-start-end-radius: 0px !important;
+        justify-content: center;
+    }
+
+    #links {
+        border-start-start-radius: 0px !important;
+        border-end-start-radius: 0px;
+    }
+
+    #technologies h2, #experiences h2, #educational-bg h2 {
+        text-align: center;
+    }
+
+    #technologies ul {
+        justify-content: center;
+    }
+
+    #experiences, #educational-bg {
+        width: 48% !important;
+    }
+
+    #experiences {
+        margin-bottom: 0px;
+        margin-right: auto;
+    }
+
+    #portfolio {
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 668px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #personal-info {
+        padding: 30px 30px 30px 30px;
+    }
+
+    #personal-info section {
+        width: 100% !important;
+    }
+
+    #portfolio {
+        padding: 30px 30px 30px 30px;
     }
 
 }
