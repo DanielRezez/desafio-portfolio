@@ -131,30 +131,26 @@ main section {
 
 #technologies {
     height: 208px;
+    overflow: visible;
 }
 
 #technologies ul {
-    gap: 15px;
-    column-gap: 15px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: 75%;
-    width: 98%;
+    height: 120px;
     overflow: scroll;
+    gap: 15px;
+    display: grid;
+	grid-template-columns: repeat(3, minmax(86px, 1fr));
     scrollbar-color: #3EB489 var(--body-bg-color);
     /*top right bottom left*/
-    margin: 0 5px 0 12px;
-    padding-bottom: 5px;
+    padding: 8px;
     list-style: none;
 }
 
 #technologies ul li {
     background: var(--bg-techs);
-    width: 86px;
     height: 24px;
     border-radius: 30px;
-    padding: 6px 0;
+    padding: 6px 0px;
     font-size: 10px;
     font-weight: 700;
     color: black;
@@ -245,7 +241,6 @@ main section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     flex-wrap: wrap;
-    overflow: visible;
     gap: 30px;
 }
 
@@ -372,7 +367,7 @@ footer {
     padding: 40px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 900px) {
+@media screen and (min-width: 768px) and (max-width: 968px) {
     #personal-info {
         padding: 30px 30px 30px 30px;
     }
@@ -380,6 +375,7 @@ footer {
     #personal-info section {
         width: 100%;
     }
+
     #portfolio {
         padding: 30px 30px 0px 0px;
     }
@@ -392,13 +388,8 @@ footer {
     }
     
     #personal-info {
-        padding: 30px 30px 30px 30px;
         display: flex;
         flex-wrap: wrap;
-    }
-
-    #personal-info section {
-        width: 100%;
     }
 
     #profile, #links {
@@ -418,6 +409,12 @@ footer {
 
     #technologies h2, #experiences h2, #educational-bg h2 {
         text-align: center;
+    }
+
+    #technologies {
+        margin-left: auto;
+        margin-right: auto;
+        width: 50vw !important;
     }
 
     #technologies ul {
@@ -443,17 +440,64 @@ footer {
         display: flex;
         flex-direction: column;
     }
-    
+
     #personal-info {
-        padding: 30px 30px 30px 30px;
+        padding: 30px;
     }
 
-    #personal-info section {
+    #profile {
+        margin-bottom: 0px !important;
+        border-end-start-radius: 0px;
+        border-start-end-radius: 20px !important;
+        width: 100% !important;
+    }
+
+    #links {
+        padding-top: 0px;
+        border-start-end-radius: 0px;
+        border-end-start-radius: 20px;
+        width: 100% !important;
+    }
+
+    #links nav ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    #technologies {
+        width: 100% !important;
+    }
+
+    #experiences {
+        margin-bottom: 30px;
+    }
+
+    #experiences, #educational-bg {
         width: 100% !important;
     }
 
     #portfolio {
-        padding: 30px 30px 30px 30px;
+        padding: 30px;
+    }
+
+}
+
+@media screen and (max-width: 468px) {
+    #posts li a {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #user-pic {
+        margin: 0 auto;
+    }
+
+    #technologies ul {
+        grid-template-columns: 1fr 1fr; 
+    }
+
+    #projects {
+        grid-template-columns: auto;
     }
 
 }
