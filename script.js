@@ -30,7 +30,9 @@ function getApiGithub() {
                                 <figcaption>${item.forks_count}</figcaption>
                             </figure>
                         </span>
-                        <span id="most-used-language">${item.language}</span>
+                        <span id="most-used-language">
+                            ${item.language}
+                        </span>
                     </div>
                 </a>
             `
